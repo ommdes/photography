@@ -1,0 +1,27 @@
+# Base configs
+# IMPORTANT: If your repository is at github.com/username/repo, set baseurl to "/repo"
+# If you are hosting on your primary domain (username.github.io) or a custom domain, leave baseurl as ""
+baseurl: "/photography"
+image_fulls_loc: "/images/fulls"
+image_thumbs_loc: "/images/thumbs"
+google_analytics: ""
+
+# UI configs
+title: "Photography by Omm Dhal"
+subtitle: "See the world through my eyes!"
+author: "Omm Dhal"
+header:
+ title: "Photography"
+ subtitle: "by Omm Dhal"
+footer:
+ name: "Hey there, my name is Omm Dhal"
+ bio: "An architect with a passion for photography."
+ github: "My professional photography portfolio."
+web_design: "AJ"
+
+social_urls:
+  instagram: "https://www.instagram.com/ommmyfilms/"
+
+# Configure which exif data to display
+# Tag is the actual exif tag, icon is a fontawesome icon. Use JSON notation without line breaks
+exif: '[{"tag": "Model", "icon": "fa fa-camera-retro"}, {"tag": "FNumber", "icon": "far fa-dot-circle"}, {"tag": "ExposureTime", "icon": "far fa-clock"}, {"tag": "ISOSpeedRatings", "icon": "fa fa-info-circle"}]'
