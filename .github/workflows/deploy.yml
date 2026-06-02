@@ -47,15 +47,15 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           
-          # Add new fulls, thumbs, and raw archived photos
-          git add images/
+          # Add new fulls, thumbs, raw archived photos, and lockfile
+          git add images/ package-lock.json
           
-          # Check if there are changes to commit
-          if [ -n "$(git status --porcelain)" ]; then
+          # Check if there are staged changes to commit
+          if ! git diff --cached --quiet; then
             git commit -m "chore: auto-generate thumbnails and archive originals [skip ci]"
             git push origin main
           else
-            echo "No new images to process."
+            echo "No new images or lockfile to process."
           fi
 
       - name: Setup Ruby
