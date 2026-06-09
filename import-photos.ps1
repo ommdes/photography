@@ -64,7 +64,8 @@ try {
         git commit -m "feat: upload new photos from Omm's D:\Photos for processing"
         
         Write-Host "Syncing with cloud (downloading generated thumbnails)..." -ForegroundColor Yellow
-        git pull --rebase origin main
+        git config merge.directoryRenames false
+        git pull origin main --no-rebase
         
         git push origin main
         Write-Host "==========================================" -ForegroundColor Green
