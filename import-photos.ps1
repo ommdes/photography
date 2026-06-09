@@ -62,6 +62,10 @@ try {
     if ($null -ne $status -and $status -ne "") {
         Write-Host "Staging new images and pushing to GitHub..." -ForegroundColor Cyan
         git commit -m "feat: upload new photos from Omm's D:\Photos for processing"
+        
+        Write-Host "Syncing with cloud (downloading generated thumbnails)..." -ForegroundColor Yellow
+        git pull --rebase origin main
+        
         git push origin main
         Write-Host "==========================================" -ForegroundColor Green
         Write-Host "SUCCESS! Your photos have been uploaded to GitHub!" -ForegroundColor Green
